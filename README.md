@@ -145,26 +145,6 @@ Edit `data/events.json`:
 
 ---
 
-## 🌐 Hosting on Hostinger
-
-### Auto-Deploy Setup:
-
-1. Log in to Hostinger hPanel
-2. Go to **Git** section
-3. Connect this GitHub repository
-4. Enable **Auto Deployment**
-5. Every push to `main` will update your live site!
-
----
-
-## 📞 Contact Information
-
-- **Main:** +91 78788 91891
-- **Alternate:** +91 89800 60015
-- **WhatsApp:** [Click to Chat](https://wa.me/917878891891)
-
----
-
 ## 📍 Locations
 
 - Jivrajpark (2 centers)
