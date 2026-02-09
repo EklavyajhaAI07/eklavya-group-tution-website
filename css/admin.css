@@ -122,6 +122,18 @@
     gap: var(--space-3);
 }
 
+.btn-export {
+    background: #10B981;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.btn-export:hover {
+    background: #059669;
+}
+
 .add-btn {
     display: flex;
     align-items: center;

@@ -655,20 +655,50 @@ async function updateDataFiles() {
   }
 }
 
-// Export function for downloading data
-function exportData() {
-  const data = localStorage.getItem('egt_export_data');
-  if (!data) {
-    alert('No data to export');
-    return;
-  }
+// ===================================
+// EXPORT FUNCTIONS (For Static Hosting)
+// ===================================
 
-  const blob = new Blob([data], { type: 'application/json' });
+function exportData() {
+  // 1. Get current data from localStorage
+  const achievementsData = {
+    stats: getData(STORAGE_KEYS.stats) || {},
+    achievements: getData(STORAGE_KEYS.achievements) || []
+  };
+
+  const facultyData = {
+    mainFaculty: getData(STORAGE_KEYS.mainFaculty) || {},
+    otherFaculty: getData(STORAGE_KEYS.faculty) || []
+  };
+
+  const eventsData = {
+    notices: getData(STORAGE_KEYS.notices) || [],
+    events: getData(STORAGE_KEYS.events) || []
+  };
+
+  const galleryData = {
+    gallery: getData(STORAGE_KEYS.gallery) || [],
+    documents: []
+  };
+
+  // 2. Download files
+  downloadFile('achievements.json', JSON.stringify(achievementsData, null, 2));
+  setTimeout(() => downloadFile('faculty.json', JSON.stringify(facultyData, null, 2)), 500);
+  setTimeout(() => downloadFile('events.json', JSON.stringify(eventsData, null, 2)), 1000);
+  setTimeout(() => downloadFile('gallery.json', JSON.stringify(galleryData, null, 2)), 1500);
+
+  alert('⬇️ Downloading 4 JSON files...\n\nPLEASE ACTION:\n1. Go to your GitHub repository\n2. Open "data" folder\n3. Click "Add file" > "Upload files"\n4. Drag & drop these 4 files there\n5. Commit changes');
+}
+
+function downloadFile(filename, content) {
+  const blob = new Blob([content], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'egt-website-data.json';
+  a.download = filename;
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
 
