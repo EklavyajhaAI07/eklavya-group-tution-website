@@ -1,0 +1,34 @@
+{
+    "notices": [
+        {
+            "id": 1,
+            "title": "Admissions Open for 2025-26",
+            "description": "New batch admissions are now open for all classes. Limited seats available.",
+            "date": "2025-02-01",
+            "important": true,
+            "active": true
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "Annual Math Quiz Competition",
+            "description": "Inter-batch mathematics quiz competition with exciting prizes.",
+            "date": "2025-03-15",
+            "time": "10:00 AM",
+            "location": "Jivrajpark Center",
+            "image": "",
+            "active": true
+        }
+    ],
+    "celebrations": [
+        {
+            "id": 1,
+            "title": "Republic Day Celebration 2025",
+            "description": "Students and faculty celebrated Republic Day together.",
+            "date": "2025-01-26",
+            "images": [],
+            "active": true
+        }
+    ]
+}

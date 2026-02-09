@@ -1,0 +1,20 @@
+{
+    "gallery": [
+        {
+            "id": 1,
+            "title": "Classroom Session",
+            "category": "classes",
+            "image": "",
+            "description": "Students learning in our modern classroom"
+        }
+    ],
+    "documents": [
+        {
+            "id": 1,
+            "title": "Study Material Sample",
+            "type": "pdf",
+            "url": "",
+            "description": "Sample study material for Class 10"
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+  "stats": {
+    "studentsCount": "5000+",
+    "passRate": "95%",
+    "topScorers": "500+",
+    "jeeSelections": "100+"
+  },
+  "achievements": [
+    {
+      "id": 1,
+      "icon": "🏆",
+      "title": "Board Exam Toppers",
+      "description": "Multiple students scoring 95%+ in board examinations every year",
+      "badge": "Board Exams",
+      "year": "2025"
+    },
+    {
+      "id": 2,
+      "icon": "🎯",
+      "title": "JEE Success Stories",
+      "description": "Students selected in prestigious engineering colleges through JEE",
+      "badge": "JEE Main & Advanced",
+      "year": "2025"
+    },
+    {
+      "id": 3,
+      "icon": "📈",
+      "title": "Remarkable Improvements",
+      "description": "Students improving from failing grades to scoring 80%+ in maths",
+      "badge": "Improvement Stories",
+      "year": "2025"
+    },
+    {
+      "id": 4,
+      "icon": "⭐",
+      "title": "Consistent Excellence",
+      "description": "26 years of producing outstanding results across boards",
+      "badge": "Since 1999",
+      "year": "2025"
+    },
+    {
+      "id": 5,
+      "icon": "🥇",
+      "title": "Competition Winners",
+      "description": "Students excelling in various mathematics olympiads and competitions",
+      "badge": "Olympiads",
+      "year": "2025"
+    },
+    {
+      "id": 6,
+      "icon": "💯",
+      "title": "Perfect Scores",
+      "description": "Multiple students achieving 100/100 in mathematics",
+      "badge": "Full Marks",
+      "year": "2025"
+    }
+  ],
+  "studentResults": [
+    {
+      "id": 1,
+      "name": "Student Name",
+      "class": "Class 12",
+      "board": "CBSE",
+      "marks": "98%",
+      "year": "2025",
+      "image": ""
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+    "mainFaculty": {
+        "name": "Tushar Shah",
+        "title": "Founder & Head Faculty – Mathematics",
+        "image": "",
+        "bio": "An Electrical Engineer by qualification with extensive industry experience across multiple MNCs. Tushar Sir has been teaching mathematics since 1999, combining his technical expertise with a passion for education.",
+        "bio2": "His unique approach blends real-world applications with academic concepts, making mathematics relevant and interesting for students. Over 26 years, he has helped thousands of students not just pass exams, but truly understand and appreciate mathematics.",
+        "highlights": [
+            {
+                "icon": "graduation",
+                "text": "Electrical Engineer"
+            },
+            {
+                "icon": "briefcase",
+                "text": "MNC Experience"
+            },
+            {
+                "icon": "clock",
+                "text": "Teaching Since 1999"
+            },
+            {
+                "icon": "users",
+                "text": "5000+ Students Taught"
+            }
+        ]
+    },
+    "otherFaculty": [
+        {
+            "id": 1,
+            "name": "Faculty Member",
+            "subject": "Mathematics Specialist",
+            "image": "",
+            "experience": "5+ years"
+        },
+        {
+            "id": 2,
+            "name": "Faculty Member",
+            "subject": "Mathematics Specialist",
+            "image": "",
+            "experience": "5+ years"
+        },
+        {
+            "id": 3,
+            "name": "Faculty Member",
+            "subject": "Mathematics Specialist",
+            "image": "",
+            "experience": "5+ years"
+        }
+    ]
+}
