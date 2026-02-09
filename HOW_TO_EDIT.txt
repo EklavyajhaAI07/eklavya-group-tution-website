@@ -1,0 +1,22 @@
+HOW TO EDIT YOUR WEBSITE
+
+1. TEXT
+   - Open 'index.html' in Notepad or VS Code.
+   - Search for the text you want to change (Ctrl+F).
+   - Change the text inside the > and < brackets.
+   - Save the file.
+
+2. LOGO
+   - Replace the file 'images/logo.png' with your new logo image.
+   - Make sure the new image is named exactly 'logo.png'.
+
+3. FACULTY PHOTOS
+   - Replace 'images/faculty-main.jpg' with your new photo.
+   - Make sure it is named exactly 'faculty-main.jpg'.
+
+4. UPLOADING CHANGES
+   - After editing, push to GitHub:
+     git add .
+     git commit -m "Updated content"
+     git push
+   - Netlify will update automatically.

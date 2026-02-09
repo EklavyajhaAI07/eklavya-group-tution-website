@@ -9,6 +9,7 @@
   <meta name="keywords"
     content="mathematics tuition, maths coaching, JEE preparation, board exam coaching, Ahmedabad tuition, Eklavya Group Tution">
   <title>Eklavya Group Tution – 26 Years of Mathematical Excellence</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,9 +163,9 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-image reveal">
-          <div class="placeholder-image"
-            style="background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%); aspect-ratio: 4/3; border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 6rem;">
-            🎓
+          <div class="about-logo-container"
+            style="background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%); aspect-ratio: 4/3; border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 2rem;">
+            <img src="images/logo.png" alt="EGT Logo" style="width: 100%; height: auto; object-fit: contain;">
           </div>
           <div class="about-badge">
             <strong>26</strong>
@@ -566,21 +567,17 @@
       <!-- Other Faculty -->
       <h3 class="text-center mb-8 reveal">Our Teaching Team</h3>
       <div class="faculty-grid reveal">
-        <div class="faculty-card">
-          <div class="faculty-card-image">👩‍🏫</div>
-          <h4>Expert Faculty</h4>
-          <span>Mathematics Specialist</span>
-        </div>
-        <div class="faculty-card">
-          <div class="faculty-card-image">👨‍🏫</div>
-          <h4>Expert Faculty</h4>
-          <span>Mathematics Specialist</span>
-        </div>
-        <div class="faculty-card">
-          <div class="faculty-card-image">👩‍🏫</div>
-          <h4>Expert Faculty</h4>
-          <span>Mathematics Specialist</span>
-        </div>
+        <!-- Faculty will be loaded dynamically -->
+      </div>
+      <div class="text-center mt-8">
+        <a href="admin.html" class="btn btn-secondary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="margin-right: 0.5rem;">
+            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+          Manage Faculty
+        </a>
       </div>
     </div>
   </section>
@@ -620,59 +617,17 @@
 
       <!-- Achievement Cards -->
       <div class="achievements-grid">
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">🏆</div>
-          <div class="achievement-content">
-            <h4>Board Exam Toppers</h4>
-            <p>Multiple students scoring 95%+ in board examinations every year</p>
-            <span class="achievement-badge">Board Exams</span>
-          </div>
-        </div>
-
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">🎯</div>
-          <div class="achievement-content">
-            <h4>JEE Success Stories</h4>
-            <p>Students selected in prestigious engineering colleges through JEE</p>
-            <span class="achievement-badge">JEE Main & Advanced</span>
-          </div>
-        </div>
-
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">📈</div>
-          <div class="achievement-content">
-            <h4>Remarkable Improvements</h4>
-            <p>Students improving from failing grades to scoring 80%+ in maths</p>
-            <span class="achievement-badge">Improvement Stories</span>
-          </div>
-        </div>
-
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">⭐</div>
-          <div class="achievement-content">
-            <h4>Consistent Excellence</h4>
-            <p>26 years of producing outstanding results across boards</p>
-            <span class="achievement-badge">Since 1999</span>
-          </div>
-        </div>
-
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">🥇</div>
-          <div class="achievement-content">
-            <h4>Competition Winners</h4>
-            <p>Students excelling in various mathematics olympiads and competitions</p>
-            <span class="achievement-badge">Olympiads</span>
-          </div>
-        </div>
-
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">💯</div>
-          <div class="achievement-content">
-            <h4>Perfect Scores</h4>
-            <p>Multiple students achieving 100/100 in mathematics</p>
-            <span class="achievement-badge">Full Marks</span>
-          </div>
-        </div>
+        <!-- Achievements will be loaded dynamically -->
+      </div>
+      <div class="text-center mt-8">
+        <a href="admin.html" class="btn btn-secondary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            style="margin-right: 0.5rem;">
+            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+          Manage Achievements
+        </a>
       </div>
     </div>
   </section>
@@ -963,6 +918,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
+          <img src="images/logo.png" alt="EGT Logo" style="height: 60px; margin-bottom: 1rem;">
           <h3>Eklavya Group Tution</h3>
           <p>26 Years of Mathematical Excellence. Building strong foundations through conceptual understanding.</p>
           <div class="footer-social">
@@ -1013,7 +969,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Eklavya Group Tution. All rights reserved.</p>
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Eklavya Group Tution. All rights reserved.</p>
+          <p class="developer-credit">CODE & MANAGED BY EKLAVYA JHA</p>
+        </div>
         <div class="footer-trust">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

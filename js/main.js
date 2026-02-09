@@ -37,13 +37,13 @@ async function loadAchievements() {
       return;
     }
 
-    // Fallback to JSON file
-    const response = await fetch('data/achievements.json');
-    const data = await response.json();
-    if (data.stats) updateStats(data.stats);
-    if (data.achievements && data.achievements.length > 0) renderAchievements(data.achievements);
+    // Fallback to JSON file - DISABLED as per user request to start empty
+    // const response = await fetch('data/achievements.json');
+    // const data = await response.json();
+    // if (data.stats) updateStats(data.stats);
+    // if (data.achievements && data.achievements.length > 0) renderAchievements(data.achievements);
   } catch (error) {
-    console.log('Using default achievements data');
+    console.log('Using default achievements data - specific request to keep empty');
   }
 }
 
@@ -96,13 +96,13 @@ async function loadFaculty() {
       return;
     }
 
-    // Fallback to JSON file
-    const response = await fetch('data/faculty.json');
-    const data = await response.json();
-    if (data.mainFaculty) updateMainFaculty(data.mainFaculty);
-    if (data.otherFaculty && data.otherFaculty.length > 0) renderOtherFaculty(data.otherFaculty);
+    // Fallback to JSON file - DISABLED as per user request to start empty
+    // const response = await fetch('data/faculty.json');
+    // const data = await response.json();
+    // if (data.mainFaculty) updateMainFaculty(data.mainFaculty);
+    // if (data.otherFaculty && data.otherFaculty.length > 0) renderOtherFaculty(data.otherFaculty);
   } catch (error) {
-    console.log('Using default faculty data');
+    console.log('Using default faculty data - specific request to keep empty');
   }
 }
 

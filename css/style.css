@@ -1733,3 +1733,13 @@ p {
   background: var(--color-primary-dark);
   transform: translateY(-4px);
 }
+
+/* Developer Credit */
+.developer-credit {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  margin-top: var(--space-2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
