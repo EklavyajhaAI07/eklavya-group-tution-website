@@ -1,155 +1,53 @@
-# Eklavya Group Tution Website
 
-**Official website for Eklavya Group Tution – 26 Years of Mathematical Excellence**
+## 📍 Overview
 
-Mathematics coaching for Class 3-12, Board Exams & JEE preparation in Ahmedabad.
+Eklavya Group Tuition is a professional, modern, and clean educational platform designed for a premier offline mathematics institution. With a legacy spanning over **26 years**, the website serves as a digital bridge to build trust with parents and motivate students through a structured, disciplined, and calm academic environment.
 
----
-
-## 🚀 Quick Start
-
-1. Clone the repository
-2. Open `index.html` in a browser, or run a local server:
-   ```bash
-   npx serve .
-   ```
-3. Visit `http://localhost:3000`
+The project emphasizes **offline excellence**, focusing on conceptual understanding from Class 3 to Class 12, including specialized JEE Main/Advanced preparation.
 
 ---
 
-## 📁 Project Structure
+## 🚀 Features
 
-```
-eklavya-group-tution-website/
-├── index.html          # Main website (single page)
-├── css/
-│   └── style.css       # All styles
-├── js/
-│   └── main.js         # All JavaScript
-├── data/               # ⭐ EDIT THESE TO UPDATE CONTENT
-│   ├── achievements.json
-│   ├── faculty.json
-│   ├── events.json
-│   └── gallery.json
-└── images/             # Add your images here
-```
+### 🎓 Academic Excellence
+- **Comprehensive Coverage:** Mathematics for Classes 3 to 12 (State Board & CBSE).
+- **Stream Specifics:** Tailored content for Science and Commerce students.
+- **Competitive Edge:** Dedicated modules for JEE Main and JEE Advanced.
+- **Methodology:** Step-by-step explanations, weekly tests, and formula-sheet-driven learning.
 
----
+### 🏛️ Institution Highlights
+[Faculty Image](https://github.com/user-attachments/assets/8fad7ff2-b821-45c7-94c8-8e814854f7ba)
+- **Faculty Profile:** Featuring **Tushar Shah**, an Electrical Engineer with industry MNC experience and teaching expertise since 1999.
+- **Achievements:** Showcasing board results and competitive exam milestones.
+- **Multi-Location:** Direct integration with Google Maps for four physical branches in Jivrajpark and Dharnidhar.
 
-## ✏️ How to Update Website Content
-
-### 🏆 Update Student Achievements
-
-Edit `data/achievements.json`:
-
-```json
-{
-  "achievements": [
-    {
-      "id": 1,
-      "icon": "🏆",
-      "title": "Student Name - 98% in Boards",
-      "description": "Class 12 CBSE Board Examination",
-      "badge": "Board Exams",
-      "year": "2025"
-    }
-  ]
-}
-```
-
-### 👨‍🏫 Update Faculty Details
-
-Edit `data/faculty.json`:
-
-```json
-{
-  "mainFaculty": {
-    "name": "Tushar Shah",
-    "title": "Founder & Head Faculty",
-    "image": "images/tushar-shah.jpg",  // Add photo path
-    "bio": "Your bio here..."
-  },
-  "otherFaculty": [
-    {
-      "name": "Faculty Name",
-      "subject": "Mathematics",
-      "image": "images/faculty1.jpg"
-    }
-  ]
-}
-```
-
-### 📢 Add Notices & Events
-
-Edit `data/events.json`:
-
-```json
-{
-  "notices": [
-    {
-      "id": 1,
-      "title": "Admissions Open!",
-      "description": "New batches starting soon",
-      "important": true,
-      "active": true
-    }
-  ],
-  "events": [
-    {
-      "id": 1,
-      "title": "Annual Day Celebration",
-      "date": "2025-03-15",
-      "location": "Jivrajpark Center",
-      "active": true
-    }
-  ]
-}
-```
-
-### 🖼️ Add Images
-
-1. Add images to the `images/` folder
-2. Reference them in JSON files like: `"image": "images/filename.jpg"`
+### 📱 User Experience
+- **Modern Design:** Minimalist white/light background with a single primary accent color.
+- **Responsive:** Mobile-first approach for parents and students on the go.
+- **Direct Contact:** One-tap Call and WhatsApp integration for admission enquiries.
 
 ---
 
-## 📝 Step-by-Step Content Update Guide
+## 📂 Repository Structure
 
-### Adding a New Achievement:
-
-1. Open `data/achievements.json`
-2. Add a new object to the `achievements` array:
-   ```json
-   {
-     "id": 7,
-     "icon": "🌟",
-     "title": "New Achievement Title",
-     "description": "Description here",
-     "badge": "Category",
-     "year": "2025"
-   }
-   ```
-3. Save the file
-4. Commit and push to GitHub
-5. Hostinger will auto-deploy (if enabled)
-
-### Adding Faculty Photo:
-
-1. Add photo to `images/` folder (e.g., `images/teacher.jpg`)
-2. Open `data/faculty.json`
-3. Update the `image` field:
-   ```json
-   "image": "images/teacher.jpg"
-   ```
-4. Save, commit, and push
-
----
-
-## 📍 Locations
-
-- Jivrajpark (2 centers)
-- Dharnidhar (2 centers)
-
----
+```sh
+└── eklavya-website/
+    ├── assets/
+    │   ├── images/         # Faculty photos, student achievements, location icons
+    │   ├── visuals/        # Subtle mathematical graphs and geometric backgrounds
+    │   └── docs/           # Notice templates and sample documents
+    ├── css/
+    │   ├── style.css       # Clean, modern, and disciplined styling
+    │   └── responsive.css  # Mobile-first media queries
+    ├── js/
+    │   └── main.js         # Navigation and contact form interactions
+    ├── pages/
+    │   ├── about.html      # 26-year legacy and philosophy
+    │   ├── courses.html    # Foundation to Advanced JEE modules
+    │   ├── faculty.html    # Tushar Shah & teaching staff profiles
+    │   ├── results.html    # Student achievement grid
+    │   ├── locations.html  # Map redirects and parking info
+    │   └── contact.html    # Enquiry form and direct contact links
+    └── index.html          # Hero section and snapshot of the institute
 
 Made with ❤️ for Eklavya Group Tution
