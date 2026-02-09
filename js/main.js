@@ -21,21 +21,27 @@ document.addEventListener('DOMContentLoaded', function () {
 // DYNAMIC CONTENT LOADING
 // ===================================
 
-// Load Achievements from JSON
+// Load Achievements - check localStorage first (admin panel data)
 async function loadAchievements() {
   try {
+    // First try localStorage (from admin panel)
+    const localData = localStorage.getItem('egt_achievements');
+    const localStats = localStorage.getItem('egt_stats');
+
+    if (localData || localStats) {
+      if (localStats) updateStats(JSON.parse(localStats));
+      if (localData) {
+        const achievements = JSON.parse(localData);
+        if (achievements.length > 0) renderAchievements(achievements);
+      }
+      return;
+    }
+
+    // Fallback to JSON file
     const response = await fetch('data/achievements.json');
     const data = await response.json();
-
-    // Update stats
-    if (data.stats) {
-      updateStats(data.stats);
-    }
-
-    // Update achievement cards
-    if (data.achievements && data.achievements.length > 0) {
-      renderAchievements(data.achievements);
-    }
+    if (data.stats) updateStats(data.stats);
+    if (data.achievements && data.achievements.length > 0) renderAchievements(data.achievements);
   } catch (error) {
     console.log('Using default achievements data');
   }
@@ -74,19 +80,27 @@ function renderAchievements(achievements) {
   initScrollReveal();
 }
 
-// Load Faculty from JSON
+// Load Faculty - check localStorage first (admin panel data)
 async function loadFaculty() {
   try {
+    // First try localStorage (from admin panel)
+    const localMainFaculty = localStorage.getItem('egt_main_faculty');
+    const localFaculty = localStorage.getItem('egt_faculty');
+
+    if (localMainFaculty || localFaculty) {
+      if (localMainFaculty) updateMainFaculty(JSON.parse(localMainFaculty));
+      if (localFaculty) {
+        const faculty = JSON.parse(localFaculty);
+        if (faculty.length > 0) renderOtherFaculty(faculty);
+      }
+      return;
+    }
+
+    // Fallback to JSON file
     const response = await fetch('data/faculty.json');
     const data = await response.json();
-
-    if (data.mainFaculty) {
-      updateMainFaculty(data.mainFaculty);
-    }
-
-    if (data.otherFaculty && data.otherFaculty.length > 0) {
-      renderOtherFaculty(data.otherFaculty);
-    }
+    if (data.mainFaculty) updateMainFaculty(data.mainFaculty);
+    if (data.otherFaculty && data.otherFaculty.length > 0) renderOtherFaculty(data.otherFaculty);
   } catch (error) {
     console.log('Using default faculty data');
   }
@@ -126,21 +140,29 @@ function renderOtherFaculty(facultyList) {
   `).join('');
 }
 
-// Load Events and Notices from JSON
+// Load Events and Notices - check localStorage first (admin panel data)
 async function loadEvents() {
   try {
+    // First try localStorage (from admin panel)
+    const localNotices = localStorage.getItem('egt_notices');
+    const localEvents = localStorage.getItem('egt_events');
+
+    if (localNotices) {
+      const notices = JSON.parse(localNotices).filter(n => n.active);
+      if (notices.length > 0) renderNotices(notices);
+    }
+
+    if (localEvents) {
+      const events = JSON.parse(localEvents).filter(e => e.active);
+      if (events.length > 0) renderEvents(events);
+      return;
+    }
+
+    // Fallback to JSON file
     const response = await fetch('data/events.json');
     const data = await response.json();
-
-    // Render notices if there are active ones
-    if (data.notices && data.notices.filter(n => n.active).length > 0) {
-      renderNotices(data.notices.filter(n => n.active));
-    }
-
-    // Render events section if there are active events
-    if (data.events && data.events.filter(e => e.active).length > 0) {
-      renderEvents(data.events.filter(e => e.active));
-    }
+    if (data.notices && data.notices.filter(n => n.active).length > 0) renderNotices(data.notices.filter(n => n.active));
+    if (data.events && data.events.filter(e => e.active).length > 0) renderEvents(data.events.filter(e => e.active));
   } catch (error) {
     console.log('Using default events data');
   }

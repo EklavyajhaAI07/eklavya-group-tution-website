@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel – Eklavya Group Tution</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-header-content">
+                <div class="admin-brand">
+                    <span class="admin-logo">⚙️</span>
+                    <div>
+                        <h1>Admin Panel</h1>
+                        <p>Eklavya Group Tution</p>
+                    </div>
+                </div>
+                <a href="index.html" class="btn btn-outline" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View Website
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Navigation -->
+    <nav class="admin-nav">
+        <div class="container">
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="achievements">
+                    <span class="tab-icon">🏆</span>
+                    Achievements
+                </button>
+                <button class="admin-tab" data-tab="faculty">
+                    <span class="tab-icon">👨‍🏫</span>
+                    Faculty
+                </button>
+                <button class="admin-tab" data-tab="events">
+                    <span class="tab-icon">📢</span>
+                    Events & Notices
+                </button>
+                <button class="admin-tab" data-tab="gallery">
+                    <span class="tab-icon">🖼️</span>
+                    Gallery
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="container">
+
+            <!-- ACHIEVEMENTS TAB -->
+            <div id="achievements-tab" class="admin-content active">
+                <div class="content-header">
+                    <h2>🏆 Student Achievements</h2>
+                    <button class="btn btn-primary add-btn" onclick="openModal('achievement')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        Add Achievement
+                    </button>
+                </div>
+
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <input type="text" id="stat-students" value="5000+" class="stat-input">
+                        <label>Students Taught</label>
+                    </div>
+                    <div class="stat-card">
+                        <input type="text" id="stat-passrate" value="95%" class="stat-input">
+                        <label>Pass Rate</label>
+                    </div>
+                    <div class="stat-card">
+                        <input type="text" id="stat-toppers" value="500+" class="stat-input">
+                        <label>90%+ Scorers</label>
+                    </div>
+                    <div class="stat-card">
+                        <input type="text" id="stat-jee" value="100+" class="stat-input">
+                        <label>JEE Selections</label>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="saveStats()">Save Stats</button>
+
+                <h3 class="mt-8">Achievement Cards</h3>
+                <div id="achievements-list" class="items-grid">
+                    <!-- Dynamic content loaded here -->
+                </div>
+            </div>
+
+            <!-- FACULTY TAB -->
+            <div id="faculty-tab" class="admin-content">
+                <div class="content-header">
+                    <h2>👨‍🏫 Faculty Members</h2>
+                    <button class="btn btn-primary add-btn" onclick="openModal('faculty')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        Add Faculty
+                    </button>
+                </div>
+
+                <h3>Main Faculty (Tushar Shah)</h3>
+                <div class="main-faculty-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="main-faculty-name" value="Tushar Shah" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" id="main-faculty-title" value="Founder & Head Faculty – Mathematics"
+                                class="form-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Bio</label>
+                        <textarea id="main-faculty-bio" class="form-textarea"
+                            rows="3">An Electrical Engineer by qualification with extensive industry experience across multiple MNCs. Tushar Sir has been teaching mathematics since 1999.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Photo</label>
+                        <div class="image-upload">
+                            <input type="file" id="main-faculty-image" accept="image/*"
+                                onchange="previewImage(this, 'main-faculty-preview')">
+                            <div id="main-faculty-preview" class="image-preview">
+                                <span>📷 Click or drag to upload photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="saveMainFaculty()">Save Main Faculty</button>
+                </div>
+
+                <h3 class="mt-8">Other Faculty Members</h3>
+                <div id="faculty-list" class="items-grid">
+                    <!-- Dynamic content loaded here -->
+                </div>
+            </div>
+
+            <!-- EVENTS TAB -->
+            <div id="events-tab" class="admin-content">
+                <div class="content-header">
+                    <h2>📢 Events & Notices</h2>
+                    <div class="header-buttons">
+                        <button class="btn btn-primary add-btn" onclick="openModal('notice')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                            Add Notice
+                        </button>
+                        <button class="btn btn-secondary add-btn" onclick="openModal('event')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                            Add Event
+                        </button>
+                    </div>
+                </div>
+
+                <h3>Active Notices</h3>
+                <div id="notices-list" class="items-list">
+                    <!-- Dynamic content loaded here -->
+                </div>
+
+                <h3 class="mt-8">Upcoming Events</h3>
+                <div id="events-list" class="items-grid">
+                    <!-- Dynamic content loaded here -->
+                </div>
+            </div>
+
+            <!-- GALLERY TAB -->
+            <div id="gallery-tab" class="admin-content">
+                <div class="content-header">
+                    <h2>🖼️ Photo Gallery</h2>
+                    <button class="btn btn-primary add-btn" onclick="openModal('gallery')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        Add Photo
+                    </button>
+                </div>
+
+                <div id="gallery-list" class="gallery-grid">
+                    <!-- Dynamic content loaded here -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODALS -->
+
+    <!-- Achievement Modal -->
+    <div id="achievement-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>➕ Add Achievement</h3>
+                <button class="modal-close" onclick="closeModal('achievement')">&times;</button>
+            </div>
+            <form id="achievement-form" onsubmit="saveAchievement(event)">
+                <div class="form-group">
+                    <label>Icon (Emoji)</label>
+                    <div class="emoji-picker">
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">🏆</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">🎯</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">⭐</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">🥇</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">💯</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">📈</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">🌟</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this, 'achievement')">🎓</button>
+                    </div>
+                    <input type="hidden" id="achievement-icon" value="🏆" required>
+                </div>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" id="achievement-title" class="form-input" placeholder="e.g., Board Exam Topper"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="achievement-desc" class="form-textarea"
+                        placeholder="e.g., Student Name scored 98% in Class 12 CBSE" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Badge/Category</label>
+                        <input type="text" id="achievement-badge" class="form-input" placeholder="e.g., Board Exams"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label>Year</label>
+                        <input type="text" id="achievement-year" class="form-input" placeholder="2025" value="2025">
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('achievement')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Achievement</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Faculty Modal -->
+    <div id="faculty-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>➕ Add Faculty Member</h3>
+                <button class="modal-close" onclick="closeModal('faculty')">&times;</button>
+            </div>
+            <form id="faculty-form" onsubmit="saveFaculty(event)">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="faculty-name" class="form-input" placeholder="Faculty Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject/Specialty</label>
+                    <input type="text" id="faculty-subject" class="form-input" placeholder="Mathematics Specialist"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label>Experience</label>
+                    <input type="text" id="faculty-experience" class="form-input" placeholder="e.g., 5+ years">
+                </div>
+                <div class="form-group">
+                    <label>Photo</label>
+                    <div class="image-upload">
+                        <input type="file" id="faculty-image" accept="image/*"
+                            onchange="previewImage(this, 'faculty-preview')">
+                        <div id="faculty-preview" class="image-preview">
+                            <span>📷 Click to upload photo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('faculty')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Faculty</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notice Modal -->
+    <div id="notice-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📢 Add Notice</h3>
+                <button class="modal-close" onclick="closeModal('notice')">&times;</button>
+            </div>
+            <form id="notice-form" onsubmit="saveNotice(event)">
+                <div class="form-group">
+                    <label>Notice Title</label>
+                    <input type="text" id="notice-title" class="form-input" placeholder="e.g., Admissions Open!"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="notice-desc" class="form-textarea" placeholder="Notice details..."
+                        required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="notice-important" checked> Mark as Important
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="notice-active" checked> Show on Website
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('notice')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Notice</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📅 Add Event</h3>
+                <button class="modal-close" onclick="closeModal('event')">&times;</button>
+            </div>
+            <form id="event-form" onsubmit="saveEvent(event)">
+                <div class="form-group">
+                    <label>Event Title</label>
+                    <input type="text" id="event-title" class="form-input" placeholder="e.g., Annual Day Celebration"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="event-desc" class="form-textarea" placeholder="Event details..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="event-date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" id="event-time" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="event-location" class="form-input" placeholder="e.g., Jivrajpark Center">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('event')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🖼️ Add Photo</h3>
+                <button class="modal-close" onclick="closeModal('gallery')">&times;</button>
+            </div>
+            <form id="gallery-form" onsubmit="saveGalleryItem(event)">
+                <div class="form-group">
+                    <label>Photo</label>
+                    <div class="image-upload large">
+                        <input type="file" id="gallery-image" accept="image/*"
+                            onchange="previewImage(this, 'gallery-preview')" required>
+                        <div id="gallery-preview" class="image-preview">
+                            <span>📷 Click or drag to upload photo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Title/Caption</label>
+                    <input type="text" id="gallery-title" class="form-input" placeholder="Photo description" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="gallery-category" class="form-select">
+                        <option value="events">Events & Celebrations</option>
+                        <option value="classes">Classroom</option>
+                        <option value="achievements">Awards & Achievements</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('gallery')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Photo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
