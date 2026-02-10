@@ -29,6 +29,22 @@ document.addEventListener('DOMContentLoaded', function () {
 // ===================================
 // TAB NAVIGATION
 // ===================================
+
+// Auth Guard: Check if user is logged in
+(function() {
+    if (sessionStorage.getItem('egt_authenticated') !== 'true') {
+        window.location.href = 'admin-login.html';
+    }
+})();
+
+// Logout function (Optional: add a logout button in admin.html)
+function logoutAdmin() {
+    sessionStorage.removeItem('egt_authenticated');
+    window.location.href = 'admin-login.html';
+}
+
+// ... rest of your existing admin.js code
+
 function initTabs() {
   const tabs = document.querySelectorAll('.admin-tab');
 
@@ -81,10 +97,7 @@ function loadFaculty() {
   if (mainFaculty) {
     document.getElementById('main-faculty-name').value = mainFaculty.name || '';
     document.getElementById('main-faculty-title').value = mainFaculty.title || '';
-    document.getElementById('main-faculty-bio').value = mainFaculty.bio || '';
-    if (mainFaculty.image) {
-      document.getElementById('main-faculty-preview').innerHTML = `<img src="${mainFaculty.image}" alt="Faculty">`;
-    }
+    document.getElementById('main-faculty-bio').value = mainFaculty.bio || '';    
   }
 
   const faculty = getData(STORAGE_KEYS.faculty) || [];
