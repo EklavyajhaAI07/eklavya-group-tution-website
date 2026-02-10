@@ -4,12 +4,9 @@
 
 /* Admin Header */
 .admin-header {
-    background: var(--color-text);
-    color: var(--color-white);
-    padding: var(--space-4) 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: var(--color-primary); /* Navy Blue */
+    color: white;
+
 }
 
 .admin-header-content {
@@ -79,8 +76,8 @@
 }
 
 .admin-tab.active {
-    background: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .tab-icon {
@@ -141,11 +138,8 @@
 }
 
 /* Stats Cards */
-.stats-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--space-4);
-    margin-bottom: var(--space-6);
+.stat-card {
+    border-top: 4px solid var(--color-primary);
 }
 
 .stat-card {
