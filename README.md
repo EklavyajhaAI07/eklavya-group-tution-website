@@ -80,6 +80,7 @@ The institute focuses exclusively on **offline excellence**, delivering strong f
 
 ### Mathematics & Learning Atmosphere
 ![Mathematics Classroom](https://images.unsplash.com/photo-1596495577886-d920f1fb7238)
+![Maths Equations](https://drive.google.com/drive/u/0/recent)
 ![Student Solving Math](https://images.unsplash.com/photo-1523240795612-9a054b0db644)
 
 ### Video Inspiration (Conceptual Learning)
