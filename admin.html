@@ -187,15 +187,15 @@
                                 <label>Students Taught</label>
                             </div>
                             <div class="stat-card">
-                                <input type="text" id="stat-passrate" value="95%" class="stat-input">
-                                <label>Pass Rate</label>
+                                <input type="text" id="stat-passrate" value="98%" class="stat-input">
+                                <label>Passing Rate</label>
                             </div>
                             <div class="stat-card">
-                                <input type="text" id="stat-toppers" value="500+" class="stat-input">
+                                <input type="text" id="stat-toppers" value="2500+" class="stat-input">
                                 <label>90%+ Scorers</label>
                             </div>
                             <div class="stat-card">
-                                <input type="text" id="stat-jee" value="100+" class="stat-input">
+                                <input type="text" id="stat-jee" value="150+" class="stat-input">
                                 <label>JEE Selections</label>
                             </div>
                         </div>
@@ -392,14 +392,20 @@
                         <label>Experience</label>
                         <input type="text" id="faculty-experience" class="form-input" placeholder="e.g., 5+ years">
                     </div>
-                    <div class="form-group">
-                        <label>Photo</label>
-                        <div class="image-upload">
-                            <input type="file" id="faculty-image" accept="image/*"
-                                onchange="previewImage(this, 'faculty-preview')">
-                            <div id="faculty-preview" class="image-preview">
-                                <span>📷 Click to upload photo</span>
-                            </div>
+                   <div class="form-group">
+    <label>Photo</label>
+    <div class="image-upload">
+        <input type="file" 
+               id="faculty-image" 
+               accept="image/*" 
+               multiple
+               onchange="previewImage(this, 'faculty-preview')">
+               
+        <div id="faculty-preview" class="image-preview">
+            <span>📷 Click to upload photo(s)</span>
+        </div>
+    </div>
+</div>
                         </div>
                     </div>
                     <div class="modal-actions">
@@ -487,24 +493,30 @@
             </div>
         </div>
    
-        <!-- Gallery Modal -->
-        <div id="gallery-modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3>🖼️ Add Photo</h3>
-                    <button class="modal-close" onclick="closeModal('gallery')">&times;</button>
-                </div>
-                <form id="gallery-form" onsubmit="saveGalleryItem(event)">
-                    <div class="form-group">
-                        <label>Photo</label>
-                        <div class="image-upload large">
-                            <input type="file" id="gallery-image" accept="image/*"
-                                onchange="previewImage(this, 'gallery-preview')" required>
-                            <div id="gallery-preview" class="image-preview">
-                                <span>📷 Click or drag to upload photo</span>
-                            </div>
-                        </div>
+<!-- Gallery Modal -->
+<div id="gallery-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>🖼️ Add Photo(s)</h3>
+            <button class="modal-close" onclick="closeModal('gallery')">&times;</button>
+        </div>
+        <form id="gallery-form" onsubmit="saveGalleryItem(event)">
+            <div class="form-group">
+                <label>Photo</label>
+                <div class="image-upload large">
+                    <input type="file" 
+                           id="gallery-image" 
+                           accept="image/*"
+                           multiple
+                           onchange="previewImage(this, 'gallery-preview')" 
+                           required>
+
+                    <div id="gallery-preview" class="image-preview">
+                        <span>📷 Click or drag to upload photo(s)</span>
                     </div>
+                </div>
+            </div>
+
                     <div class="form-group">
                         <label>Title/Caption</label>
                         <input type="text" id="gallery-title" class="form-input" placeholder="Photo description" required>
