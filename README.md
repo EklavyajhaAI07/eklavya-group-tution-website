@@ -24,6 +24,12 @@ The institute focuses exclusively on **offline excellence**, delivering strong f
 
 ---
 
+## Tech Stack
+![HTML](https://skillicons.dev/icons?i=html)
+![CSS](https://skillicons.dev/icons?i=css)
+![JavaScript](https://skillicons.dev/icons?i=js)
+---
+
 ## 🚀 Features
 
 ### 🎓 Academic Excellence
@@ -35,16 +41,15 @@ The institute focuses exclusively on **offline excellence**, delivering strong f
   - Weekly tests & performance analysis  
   - Formula-based revision sheets  
 
-📘 Reference Article:  
-👉 https://www.edutopia.org/article/why-conceptual-learning-matters
-
 ---
 
 ### 🏛️ Institution Highlights
 
-![Faculty Teaching Mathematics](https://images.unsplash.com/photo-1584697964154-5f5b1fca99c9)
+### WEBSITE
+<p> <a href="https://eklavyajhaai07.github.io/eklavya-group-tution-website" target="_blank" rel="noreferrer"> <img src="https://eklavyajhaai07.github.io/eklavya-group-tution-website/images/logo.png" alt="EGT" width="60" height="60"/> </a> </p>
 
 - **Founder & Faculty:** *Tushar Shah*  
+<p> <a href="https://eklavyajhaai07.github.io/eklavya-group-tution-website" target="_blank" rel="noreferrer"> <img src="https://eklavyajhaai07.github.io/eklavya-group-tution-website/images/faculty-main.jpg" alt="Tushar Shah" width="250" height="500"/> </a> </p>
   - Electrical Engineer  
   - Teaching experience since **1999**  
   - Industry exposure in reputed MNCs  
@@ -71,12 +76,11 @@ The institute focuses exclusively on **offline excellence**, delivering strong f
 - 📞 One-tap Call & WhatsApp enquiry
 - 🗺️ Location-based navigation
 
-📖 UI Inspiration:  
-👉 https://www.smashingmagazine.com/guide-to-modern-website-design/
-
+📖 UI Inspiration:
+![Here](https://pbs.twimg.com/media/G7qGrnhb0AARkhE.jpg)
 ---
 
-## 🖼️ Visual Showcase
+## 🖼️ Showcase
 
 ### Mathematics & Learning Atmosphere
 ![Mathematics Classroom](https://images.unsplash.com/photo-1596495577886-d920f1fb7238)
@@ -114,7 +118,7 @@ The institute focuses exclusively on **offline excellence**, delivering strong f
     │   └── contact.html    # Enquiry & WhatsApp
     └── index.html          # Hero & overview
 ```
-## ⚙️ Installation
+## ⚙️ Installation Guide
 
 # Clone the repository
 git clone https://github.com/your-username/eklavya-website.git
@@ -126,7 +130,7 @@ cd eklavya-website
 Open index.html in browser
 
 
-## Requirements:
+## Basic Requirements:
 
 * Modern browser (Chrome / Edge / Firefox)
 * No backend required (static site)
@@ -143,25 +147,15 @@ Open index.html in browser
 
 ## 🛣️ Roadmap
 
-#✅ Admin panel for content updates
+### ✅ Admin panel for content updates
 
-#🔜 Online admission enquiry dashboard
+### 🔜 Online admission enquiry dashboard
 
-#🔜 Student performance analytics
+### 🔜 Student performance analytics
 
-#🔜 SEO & local search optimization
+### 🔜 SEO & local search optimization
 
-##🤝 Contributing
-
-- Contributions are welcome!
-
-- Fork the repository
-
-- Create a feature branch
-
-- Commit changes clearly
-
-- Submit a pull request
+---
 
 ## 📬 Support
 
