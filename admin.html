@@ -391,30 +391,24 @@
                     <div class="form-group">
                         <label>Experience</label>
                         <input type="text" id="faculty-experience" class="form-input" placeholder="e.g., 5+ years">
-                    </div>
                    <div class="form-group">
     <label>Photo</label>
     <div class="image-upload">
         <input type="file" 
                id="faculty-image" 
-               accept="image/*" 
-               multiple
-               onchange="previewImage(this, 'faculty-preview')">
+               accept="image/*"
+               onchange="previewImage(this)">
                
         <div id="faculty-preview" class="image-preview">
-            <span>📷 Click to upload photo(s)</span>
+            <span>📷 Click to upload photo</span>
         </div>
     </div>
 </div>
-                        </div>
-                    </div>
-                    <div class="modal-actions">
-                        <button type="button" class="btn btn-secondary" onclick="closeModal('faculty')">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Save Faculty</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+
+<div class="modal-actions">
+    <button type="button" class="btn btn-secondary" onclick="closeModal('faculty')">Cancel</button>
+    <button type="submit" class="btn btn-primary">Save Faculty</button>
+</div>
    
         <!-- Notice Modal -->
         <div id="notice-modal" class="modal">
