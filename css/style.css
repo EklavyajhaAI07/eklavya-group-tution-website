@@ -891,28 +891,27 @@ p {
    =================================== */
 /* Core Layout */
 .faculty-main {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 4rem;
-  align-items: center;
-  background: #ffffff;
-  margin-bottom: 3rem;
+    display: flex; /* Grid ki jagah Flex use karein better alignment ke liye */
+    gap: 4rem;
+    align-items: flex-start;
+    background: #ffffff;
+    margin-bottom: 3rem;
+    width: 100%;
 }
 
-/* Image Handling */
 .faculty-image {
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #f3f4f6;
+    flex: 0 0 300px; /* Yeh image ki width ko 300px par lock kar dega */
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f3f4f6;
 }
 
-.faculty-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* Image fail hone par bhi placeholder ko size mein rakhega */
+.faculty-image > div {
+    height: 100%;
+    width: 100%;
 }
 
 /* Typography */
