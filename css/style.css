@@ -889,83 +889,99 @@ p {
 /* ===================================
    FACULTY SECTION
    =================================== */
+/* Core Layout */
 .faculty-main {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: var(--space-12);
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
   align-items: center;
-  background: var(--color-white);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  box-shadow: var(--shadow-lg);
-  margin-bottom: var(--space-12);
+  background: #ffffff;
+  margin-bottom: 3rem;
 }
 
+/* Image Handling */
 .faculty-image {
-  position: relative;
-}
-
-.faculty-image img,
-.faculty-image .placeholder-image {
   width: 100%;
-  aspect-ratio: 3/4;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+
+.faculty-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-xl);
+  display: block;
 }
 
-.placeholder-image {
-  background: linear-gradient(135deg, var(--color-bg-alt), var(--color-border));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-}
-
+/* Typography */
 .faculty-content h3 {
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--space-2);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .faculty-title {
-  color: var(--color-primary);
+  color: #2563eb;
   font-weight: 600;
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--space-6);
+  font-size: 1.125rem;
+  margin: 0 0 1.5rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .faculty-bio {
-  font-size: var(--font-size-base);
-  line-height: 1.8;
-  margin-bottom: var(--space-6);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 1rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Grid for Highlights */
 .faculty-highlights {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
+/* Highlight Cards */
 .faculty-highlight {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-4);
-  background: var(--color-bg-subtle);
-  border-radius: var(--radius-lg);
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border-radius: 8px;
 }
 
 .faculty-highlight svg {
-  width: 24px;
-  height: 24px;
-  color: var(--color-primary);
+  width: 22px;
+  height: 22px;
+  color: #2563eb;
   flex-shrink: 0;
 }
 
 .faculty-highlight span {
   font-weight: 500;
-  font-size: var(--font-size-sm);
+  font-size: 0.9rem;
+  color: #111827;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .faculty-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .faculty-highlights {
+    grid-template-columns: 1fr;
+  }
+}
 /* Other Faculty Grid */
 .faculty-grid {
   display: grid;
