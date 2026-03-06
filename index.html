@@ -509,9 +509,14 @@
 
       <!-- Main Faculty -->
       <div class="faculty-main reveal">
-          <div class="faculty-image" style="width: 300px; height: 350px; overflow: hidden; border-radius: 8px; background: #f3f4f6;">
-            <img src="https://github.com/EklavyajhaAI07/eklavya-group-tution-website/blob/main/images/faculty-main.jpg">
-          </div>
+  <div class="faculty-image">
+    <img 
+      src="images/faculty-main.jpg" 
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="placeholder-fallback" style="display:none; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%); font-size:5rem;">
+      👨‍🏫
+    </div>
+  </div>
         <div class="faculty-content">
           <h3>Tushar Shah</h3>
           <p class="faculty-title">Founder & Head Faculty – Mathematics</p>
